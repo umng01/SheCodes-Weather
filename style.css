@@ -138,3 +138,38 @@ li:first-letter {
 .weather-forecast-temperatures {
   font-size: 17px;
 }
+
+.bg-circles {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 500px;
+  min-height: 500px;
+}
+.bg-circles div {
+  position: absolute;
+}
+.bg-circles .c1 {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  opacity: 0.7;
+  position: relative;
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0
+      200px,
+    url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+    url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px
+      250px;
+  animation: wind 20s linear infinite;
+}
+
+@keyframes wind {
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+}
